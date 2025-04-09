@@ -29,7 +29,9 @@ A Chrome extension that helps you stay focused while using YouTube by hiding dis
 
 ---
 
-## 📂 Folder Structure
+## 📂 Images
+![alt text](image.png)
+
 
 
 ---
