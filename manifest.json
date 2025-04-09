@@ -1,0 +1,26 @@
+{
+  "manifest_version": 3,
+  "name": "YouTube Focus Mode",
+  "version": "2.0",
+  "description": "Hide distracting elements on YouTube with toggleable options.",
+  "permissions": ["storage", "scripting"],
+  "host_permissions": ["*://www.youtube.com/*"],
+  "action": {
+    "default_popup": "popup.html",
+    "default_icon": "icon.png"
+  },
+  "content_scripts": [
+  {
+    "matches": ["*://www.youtube.com/*"],
+    "js": ["content.js"],
+    "css": ["style.css"],
+    "run_at": "document_idle"
+  }
+]
+,
+  "icons": {
+    "16": "icon.png",
+    "48": "icon.png",
+    "128": "icon.png"
+  }
+}

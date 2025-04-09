@@ -1,0 +1,101 @@
+/* ========== Shorts: FULL HIDE MODE ========== */
+.ytf-hide-shorts ytd-rich-shelf-renderer[is-shorts],
+.ytf-hide-shorts ytd-reel-shelf-renderer,
+.ytf-hide-shorts ytd-grid-video-renderer[is-short],
+.ytf-hide-shorts ytd-grid-video-renderer:has(a[href*="/shorts/"]),
+.ytf-hide-shorts ytd-rich-grid-media:has(a[href*="/shorts/"]),
+.ytf-hide-shorts ytd-section-list-renderer:has(ytd-reel-shelf-renderer),
+.ytf-hide-shorts ytd-rich-section-renderer:has(ytd-reel-shelf-renderer) {
+  display: none !important;
+}
+
+/* Hide "Shorts" navigation tabs and sidebar entries */
+.ytf-hide-shorts tp-yt-paper-tab a[href*="/shorts"],
+.ytf-hide-shorts ytd-mini-guide-entry-renderer a[href*="/shorts"],
+.ytf-hide-shorts ytd-guide-entry-renderer a[href*="/shorts"] {
+  display: none !important;
+}
+
+/* ========== Shorts: GREY-OUT MODE ========== */
+.ytf-grey-shorts ytd-grid-video-renderer[is-short],
+.ytf-grey-shorts ytd-grid-video-renderer:has(a[href*="/shorts/"]),
+.ytf-grey-shorts ytd-rich-grid-media:has(a[href*="/shorts/"]),
+.ytf-grey-shorts ytd-rich-shelf-renderer[is-shorts],
+.ytf-grey-shorts ytd-reel-shelf-renderer {
+  opacity: 0.3 !important;
+  filter: grayscale(100%) blur(1px);
+  pointer-events: none !important;
+}
+
+/* Grey out Shorts-related navigation links */
+.ytf-grey-shorts tp-yt-paper-tab a[href*="/shorts"],
+.ytf-grey-shorts ytd-mini-guide-entry-renderer a[href*="/shorts"],
+.ytf-grey-shorts ytd-guide-entry-renderer a[href*="/shorts"] {
+  opacity: 0.3 !important;
+  pointer-events: none !important;
+  filter: grayscale(100%);
+}
+
+/* Optional: tooltip effect for greyed-out Shorts */
+.ytf-grey-shorts ytd-grid-video-renderer[is-short]::after,
+.ytf-grey-shorts ytd-rich-grid-media:has(a[href*="/shorts/"])::after {
+  content: "Shorts are blocked";
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  background: rgba(0, 0, 0, 0.7);
+  color: white;
+  padding: 4px 6px;
+  font-size: 12px;
+  border-radius: 4px;
+  z-index: 10;
+}
+/* ========== Hide YouTube Homepage Feed ========== */
+.ytf-hide-homepage ytd-browse[page-subtype="home"] #contents,
+.ytf-hide-homepage ytd-browse[page-subtype="home"] ytd-rich-grid-renderer,
+.ytf-hide-homepage ytd-browse[page-subtype="home"] ytd-two-column-browse-results-renderer > #primary {
+  display: none !important;
+}
+
+/* ========== Hide Suggested Sidebar Videos ========== */
+.ytf-hide-sidebar ytd-watch-next-secondary-results-renderer,
+.ytf-hide-sidebar ytd-compact-video-renderer,
+.ytf-hide-sidebar #related,
+.ytf-hide-sidebar ytd-item-section-renderer:has(ytd-compact-video-renderer) {
+  display: none !important;
+}
+/* ========== Hide Endscreen Video Suggestions ========== */
+.ytf-hide-endscreen .ytp-ce-element,
+.ytf-hide-endscreen .ytp-ce-video,
+.ytf-hide-endscreen .ytp-ce-channel,
+.ytf-hide-endscreen .ytp-ce-playlist,
+.ytf-hide-endscreen .ytp-ce-covering-overlay,
+.ytf-hide-endscreen .ytp-endscreen-content {
+  display: none !important;
+}
+/* ========== Hide Comments ========== */
+.ytf-hide-comments ytd-comments,
+.ytf-hide-comments #comments,
+.ytf-hide-comments #chat,
+.ytf-hide-comments ytd-item-section-renderer:has(ytd-comments-header-renderer),
+.ytf-hide-comments ytd-engagement-panel-section-list-renderer:has(ytd-comments-header-renderer) {
+  display: none !important;
+}
+/* ========== Hide Annotations ========== */
+.ytf-hide-annotations .ytp-button, 
+.ytf-hide-annotations .ytp-chrome-top, 
+.ytf-hide-annotations .ytp-chrome-bottom {
+  display: none !important;
+}
+
+/* ========== Hide Channel Videos ========== */
+.ytf-hide-channel-videos ytd-grid-renderer,
+.ytf-hide-channel-videos ytd-rich-grid-renderer,
+.ytf-hide-channel-videos ytd-section-list-renderer {
+  display: none !important;
+}
+/* Test: Make search page background green */
+body:has([page-subtype="search"]) {
+  background-color: lightgreen !important;
+}
+
